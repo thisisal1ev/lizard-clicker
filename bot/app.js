@@ -1,7 +1,7 @@
 import { Markup, Telegraf } from 'telegraf'
 
-const token = '7821592967:AAF7uVBg-qj_xMwGXWn2v_qtOprbFzr_j1k'
-const webAppUrl = 'https://lizard-clicker-pro-by-aliyev.web.app/'
+const token = env('TOKEN')
+const webAppUrl = env('WEB_APP_URL')
 
 const bot = new Telegraf(token)
 
