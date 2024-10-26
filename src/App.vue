@@ -8,14 +8,15 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
 import { RouterView } from 'vue-router'
 import TheMenu from './components/TheMenu.vue'
+import { onMounted, ref } from 'vue'
 import { useAppStore } from '@/stores/app'
-import { useTelegram } from './services/telegram'
+import { useTelegram } from '@/services/telegram'
 
-const app = useAppStore()
 const loaded = ref(false)
+const app = useAppStore()
+
 const { tg } = useTelegram()
 
 const urlParams = new URLSearchParams(window.location.search)

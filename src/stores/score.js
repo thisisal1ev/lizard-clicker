@@ -4,9 +4,6 @@ import { updateScore } from '@/api/app'
 
 const baseLevelScore = 25
 const debouncedUpdateScore = debounce(updateScore, 500)
-// const debounced = debounce((score)=>{
-
-// },500)
 
 const levels = new Array(20)
 	.fill(0)

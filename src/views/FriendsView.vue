@@ -11,7 +11,7 @@
 		<ul class="list">
 			<li class="list-item" v-for="friend in friends" :key="friend.id">
 				{{ friend.name }}
-				<span class="list-btn done">{{ friend.amount }}</span>
+				<span class="list-btn done">50</span>
 			</li>
 		</ul>
 	</div>

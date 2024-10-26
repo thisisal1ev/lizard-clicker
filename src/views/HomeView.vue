@@ -12,19 +12,19 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
 import ScoreProgress from '@/components/ScoreProgress.vue'
 import { useScoreStore } from '@/stores/score'
-import { computed, ref } from 'vue'
-
 import frog from '@/assets/frog.png'
 import lizard from '@/assets/lizzard.png'
 
-const store = useScoreStore()
 const img = ref(null)
 const imgSrc = computed(() => (store.score > 50 ? lizard : frog))
 
+const store = useScoreStore()
+
 function increment(event) {
-	store.add()
+	store.add(1)
 	const rect = event.target.getBoundingClientRect()
 
 	const offfsetX = event.clientX - rect.left - rect.width / 2
