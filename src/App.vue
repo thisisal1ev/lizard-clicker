@@ -16,9 +16,11 @@ import { useTelegram } from './services/telegram'
 
 const app = useAppStore()
 const loaded = ref(false)
-const tg = useTelegram()
+const { tg } = useTelegram()
 
-app.init().then(() => {
+const urlParams = new URLSearchParams(window.location.search)
+
+app.init(urlParams.get('ref')).then(() => {
 	loaded.value = true
 })
 
