@@ -32,7 +32,7 @@ export async function getOrCreateUser() {
 	return newUser
 }
 
-export async function updateScore() {
+export async function updateScore(score) {
 	await supabase.from('users').update({ score }).eq('telegram', MY_ID)
 }
 
