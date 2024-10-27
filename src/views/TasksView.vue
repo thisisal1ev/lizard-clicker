@@ -5,7 +5,6 @@
 		<ul class="list">
 			<li class="list-item" v-for="task in app.tasks" :key="task.id">
 				{{ task.title }}
-
 				<span>
 					<a
 						@click.prevent="openTask(task)"

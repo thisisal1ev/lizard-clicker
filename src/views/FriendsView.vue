@@ -36,7 +36,8 @@ const friends = computed(() =>
 
 function copy() {
 	navigator.clipboard.writeText(
-		'https://t.me/LizardClickerProByThisisal1evBotLizardClickerProBot?start=' + user?.id
+		'https://t.me/LizardClickerProByThisisal1evBot?start=' +
+			user?.id
 	)
 	referralText.value = 'Copied!'
 }
